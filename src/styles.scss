@@ -1,0 +1,126 @@
+:root {
+  --bg: #93a2b7;
+  --card: #ffffff;
+  --card-contrast: #155bf4;
+  --text: #172339;
+  --muted: #ffffff;
+  --tableHead: #172339;
+  --radius: 16px;
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root { height: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+.page {
+  min-height: 100%;
+  padding: 24px;
+  display: grid;
+  place-items: start center;
+}
+
+.card {
+  width: 1440px;
+  height: 467px;
+  background: var(--card);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 8px 30px rgba(0,0,0,.25);
+ 
+}
+
+.card-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.shareholders .grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 992px) {
+  .shareholders .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.shareholders-table .ant-table {
+  background: transparent;
+}
+
+.shareholders-table .ant-table-thead > tr > th {
+  background: var(--tableHead) !important;
+  color: #dbe3ef;
+  font-weight: 600;
+}
+
+.shareholders-table .ant-table-tbody > tr > td {
+  background: #ffffff;
+  border: none;
+  color: var(--text);
+}
+
+.holderCell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.updatedAt {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.grid-right {
+  display: flex;
+  
+}
+
+.legend {
+  list-style: none;
+  padding: 0;
+  margin: 30px 0 0;
+  width: 100%;
+}
+.legend li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 4px;
+  font-size: 15px;
+  color: #454F61;
+}
+.legend .legend-name {
+  color: #454F61;
+}
+
+.loading {
+  display: grid;
+  place-items: center;
+  min-height: 300px;
+}
+
+.donut-wrapper {
+  width: 100%;
+  background: #ffffff;
+  border-radius: var(--radius);
+  padding: 12px;
+}
